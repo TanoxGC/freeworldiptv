@@ -4,139 +4,170 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>World Free IPTV | Free and Legal TV Channels Worldwide</title>
-  <meta name="description" content="Discover free and legal IPTV channels from around the world. Explore public TV, news, culture and entertainment channels and learn how to watch them with VLC.">
-  <meta name="keywords" content="World Free IPTV, free IPTV, legal IPTV, world TV channels, free TV, M3U playlist, VLC IPTV">
-  <meta name="author" content="World Free IPTV">
-  <meta name="robots" content="index, follow">
+  <meta name="description" content="Discover free and legal TV channels from around the world. Browse by country and learn how to watch channels with VLC.">
   <meta name="theme-color" content="#080b18">
   <link rel="canonical" href="https://tanoxgc.github.io/freeworldiptv/">
-
-  <meta property="og:type" content="website">
-  <meta property="og:locale" content="en_US">
-  <meta property="og:site_name" content="World Free IPTV">
-  <meta property="og:title" content="World Free IPTV | Free TV Channels Worldwide">
-  <meta property="og:description" content="Discover free and legal TV channels from around the world and learn how to watch them with VLC.">
-  <meta property="og:url" content="https://tanoxgc.github.io/freeworldiptv/">
-
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="World Free IPTV | Free TV Channels Worldwide">
-  <meta name="twitter:description" content="Discover free and legal TV channels from around the world.">
-
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <link rel="apple-touch-icon" href="favicon.svg">
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "World Free IPTV",
-    "url": "https://tanoxgc.github.io/freeworldiptv/",
-    "description": "A guide to discovering free and legally available television channels worldwide.",
-    "inLanguage": "en"
-  }
-  </script>
-
   <style>
-    :root { --primary:#6c63ff; --accent:#16d6a4; --background:#080b18; --surface:#11162a; --text:#f7f8ff; --muted:#adb3c7; }
+    :root { --primary:#6c63ff; --accent:#16d6a4; --background:#080b18; --surface:#11162a; --text:#f7f8ff; --muted:#adb3c7; --border:#242a43; }
     * { box-sizing:border-box; }
     html { scroll-behavior:smooth; }
-    body { margin:0; font-family:Inter,Arial,sans-serif; color:var(--text); background:radial-gradient(circle at 80% 10%,rgba(108,99,255,.22),transparent 28rem),var(--background); }
+    body { margin:0; color:var(--text); font-family:Inter,Arial,sans-serif; background:radial-gradient(circle at 80% 10%,rgba(108,99,255,.22),transparent 28rem),var(--background); }
     a { color:inherit; }
-    nav { max-width:1180px; margin:auto; padding:24px 20px; display:flex; align-items:center; justify-content:space-between; }
-    .brand { font-size:20px; font-weight:800; }
+    nav { max-width:1180px; margin:auto; padding:24px 20px; display:flex; align-items:center; justify-content:space-between; gap:20px; }
+    .brand { color:var(--text); font-size:20px; font-weight:800; text-decoration:none; }
     .brand span { color:var(--accent); }
-    .nav-button,.cta,.download-button { color:white; text-decoration:none; font-weight:700; border-radius:12px; background:var(--primary); padding:12px 18px; }
+    .nav-actions { display:flex; align-items:center; gap:12px; }
+    .language-switch { display:flex; gap:4px; padding:4px; border:1px solid #303650; border-radius:12px; background:var(--surface); }
+    .language-switch button { padding:8px 10px; border:0; border-radius:8px; color:var(--muted); background:transparent; font:inherit; font-weight:800; cursor:pointer; }
+    .language-switch button[aria-pressed="true"] { color:#08130f; background:var(--accent); }
+    .nav-button,.cta,.copy-button,.download-button { display:inline-block; padding:12px 18px; border:0; border-radius:12px; color:white; background:var(--primary); font-weight:700; text-decoration:none; cursor:pointer; }
     .hero { max-width:1180px; min-height:600px; margin:auto; padding:80px 20px; display:grid; grid-template-columns:1.1fr .9fr; align-items:center; gap:48px; }
     h1 { max-width:700px; margin:0 0 24px; font-size:clamp(48px,8vw,88px); line-height:.95; letter-spacing:-5px; }
     h1 span { color:var(--accent); }
     .hero p { max-width:580px; color:var(--muted); font-size:20px; line-height:1.7; }
-    .actions { display:flex; gap:14px; margin-top:32px; }
+    .actions { display:flex; flex-wrap:wrap; gap:14px; margin-top:32px; }
     .cta { padding:16px 22px; }
-    .secondary { color:var(--text); text-decoration:none; padding:16px 22px; border:1px solid #303650; border-radius:12px; font-weight:700; }
-    .globe-card { position:relative; aspect-ratio:1; max-width:470px; margin-left:auto; border:1px solid rgba(255,255,255,.09); border-radius:50%; display:grid; place-items:center; background:linear-gradient(rgba(108,99,255,.12) 1px,transparent 1px),linear-gradient(90deg,rgba(108,99,255,.12) 1px,transparent 1px),rgba(17,22,42,.6); background-size:40px 40px; box-shadow:0 30px 100px rgba(108,99,255,.18); }
-    .globe-card::before { content:""; position:absolute; width:72%; height:72%; border:1px dashed rgba(22,214,164,.5); border-radius:50%; }
+    .secondary { padding:16px 22px; border:1px solid #303650; border-radius:12px; color:var(--text); font-weight:700; text-decoration:none; }
+    .globe-card { position:relative; max-width:470px; aspect-ratio:1; margin-left:auto; border:1px solid rgba(255,255,255,.09); border-radius:50%; display:grid; place-items:center; background:linear-gradient(rgba(108,99,255,.12) 1px,transparent 1px),linear-gradient(90deg,rgba(108,99,255,.12) 1px,transparent 1px),rgba(17,22,42,.6); background-size:40px 40px; box-shadow:0 30px 100px rgba(108,99,255,.18); }
+    .globe-card::before { position:absolute; width:72%; height:72%; border:1px dashed rgba(22,214,164,.5); border-radius:50%; content:""; }
     .globe-icon { font-size:150px; filter:drop-shadow(0 20px 30px rgba(22,214,164,.15)); }
-    .badge { position:absolute; right:-15px; bottom:35px; padding:12px 16px; border-radius:12px; background:var(--surface); border:1px solid #303650; font-size:14px; font-weight:700; }
+    .badge { position:absolute; right:-15px; bottom:35px; padding:12px 16px; border:1px solid #303650; border-radius:12px; background:var(--surface); font-size:14px; font-weight:700; }
     section { max-width:1180px; margin:auto; padding:70px 20px; }
-    .section-title h2 { margin:0 0 24px; font-size:32px; }
+    .section-title h2 { margin:0 0 12px; font-size:32px; }
+    .section-intro { margin:0 0 24px; color:var(--muted); line-height:1.6; }
+    .search-wrap { max-width:520px; margin:0 0 24px; }
+    .search-wrap label { display:block; margin-bottom:8px; font-size:14px; font-weight:700; }
+    .search-input { width:100%; padding:14px 16px; border:1px solid #3b4260; border-radius:12px; outline:none; color:var(--text); background:var(--surface); font:inherit; }
+    .search-input:focus { border-color:var(--accent); box-shadow:0 0 0 3px rgba(22,214,164,.12); }
     .grid { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; }
-    .card { min-height:180px; border:1px solid #242a43; border-radius:18px; padding:22px; background:var(--surface); transition:.2s; }
+    .card { min-height:190px; padding:22px; border:1px solid var(--border); border-radius:18px; background:var(--surface); transition:transform .2s,border-color .2s; }
     .card:hover { transform:translateY(-5px); border-color:var(--primary); }
     .flag { font-size:38px; }
     .card h3 { margin:20px 0 8px; }
-    .card p { margin:0; color:var(--muted); }
+    .card p { margin:0; color:var(--muted); line-height:1.5; }
+    .copy-button { margin-top:16px; width:100%; background:var(--accent); color:#08130f; }
+    .copy-button.copied { background:#d8fff3; }
+    .no-results { margin:20px 0 0; color:var(--muted); }
     .steps { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
-    .step { padding:28px; border:1px solid #242a43; border-radius:18px; background:var(--surface); }
+    .step { padding:28px; border:1px solid var(--border); border-radius:18px; background:var(--surface); }
     .step-number { width:42px; height:42px; display:grid; place-items:center; border-radius:50%; background:var(--primary); font-weight:800; }
     .step h3 { margin:20px 0 12px; }
     .step p { color:var(--muted); line-height:1.6; }
-    .download-button { display:inline-block; margin-top:12px; background:var(--accent); color:#08130f; }
-    kbd { padding:3px 7px; border:1px solid #3b4260; border-radius:6px; background:#090d1d; color:var(--text); }
-    .legal { margin:10px auto 80px; padding:22px; border:1px solid rgba(22,214,164,.25); border-radius:16px; background:rgba(22,214,164,.06); color:var(--muted); line-height:1.6; }
-    footer { border-top:1px solid #242a43; padding:30px 20px; text-align:center; color:var(--muted); }
-    @media (max-width:800px) { .hero { grid-template-columns:1fr; padding-top:50px; text-align:center; } h1 { letter-spacing:-3px; } .hero p { margin-inline:auto; } .actions { justify-content:center; } .globe-card { margin:20px auto 0; max-width:330px; } .grid { grid-template-columns:repeat(2,1fr); } .steps { grid-template-columns:1fr; } }
-    @media (max-width:480px) { .nav-button { display:none; } .actions { flex-direction:column; } .grid { grid-template-columns:1fr; } }
+    .download-button { margin-top:12px; background:var(--accent); color:#08130f; }
+    kbd { padding:3px 7px; border:1px solid #3b4260; border-radius:6px; color:var(--text); background:#090d1d; }
+    .legal { margin:10px auto 80px; padding:22px; border:1px solid rgba(22,214,164,.25); border-radius:16px; color:var(--muted); background:rgba(22,214,164,.06); line-height:1.6; }
+    footer { padding:30px 20px; border-top:1px solid var(--border); color:var(--muted); text-align:center; }
+    @media (max-width:800px) { .hero { grid-template-columns:1fr; padding-top:50px; text-align:center; } h1 { letter-spacing:-3px; } .hero p { margin-inline:auto; } .actions { justify-content:center; } .globe-card { max-width:330px; margin:20px auto 0; } .grid { grid-template-columns:repeat(2,1fr); } .steps { grid-template-columns:1fr; } }
+    @media (max-width:560px) { nav { flex-wrap:wrap; } .nav-actions { width:100%; justify-content:space-between; } .grid { grid-template-columns:1fr; } .hero { min-height:auto; } }
   </style>
 </head>
 <body>
-  <nav aria-label="Main navigation">
-    <a class="brand" href="./" aria-label="World Free IPTV home">World <span>Free IPTV</span></a>
-    <a class="nav-button" href="#how-it-works">How to Watch</a>
+  <nav aria-label="Main navigation" data-i18n-aria-label="navLabel">
+    <a class="brand" href="./">World <span>Free IPTV</span></a>
+    <div class="nav-actions">
+      <div class="language-switch" role="group" aria-label="Select language">
+        <button type="button" data-language="en" aria-pressed="true">EN</button>
+        <button type="button" data-language="es" aria-pressed="false">ES</button>
+      </div>
+      <a class="nav-button" href="#how-it-works" data-i18n="navHowToWatch">How to Watch</a>
+    </div>
   </nav>
 
   <main>
     <section class="hero">
       <div>
-        <h1>Television <span>without borders.</span></h1>
-        <p>Discover free and legal TV channels from around the world. News, culture, entertainment and local stories — all in one place.</p>
+        <h1><span data-i18n="heroTitleFirst">Television</span> <span data-i18n="heroTitleAccent">without borders.</span></h1>
+        <p data-i18n="heroDescription">Discover free and legal TV channels from around the world. News, culture, entertainment and local stories — all in one place.</p>
         <div class="actions">
-          <a class="cta" href="#channels">Explore channels</a>
-          <a class="secondary" href="#how-it-works">How to watch</a>
+          <a class="cta" href="#channels" data-i18n="exploreChannels">Explore channels</a>
+          <a class="secondary" href="#how-it-works" data-i18n="howToWatch">How to watch</a>
         </div>
       </div>
-      <div class="globe-card" aria-label="World television">
+      <div class="globe-card" role="img" aria-label="Globe representing worldwide television">
         <div class="globe-icon" aria-hidden="true">🌍</div>
-        <div class="badge">● Free and legal TV</div>
+        <div class="badge" data-i18n="badge">● Free and legal TV</div>
       </div>
     </section>
 
     <section id="channels">
-      <div class="section-title"><h2>Channels around the world</h2></div>
-      <div class="grid">
-        <article class="card"><div class="flag" aria-hidden="true">🇺🇸</div><h3>United States</h3><p>News, local TV and culture</p></article>
-        <article class="card"><div class="flag" aria-hidden="true">🇪🇸</div><h3>Spain</h3><p>Entertainment and public TV</p></article>
-        <article class="card"><div class="flag" aria-hidden="true">🇯🇵</div><h3>Japan</h3><p>News, lifestyle and travel</p></article>
-        <article class="card"><div class="flag" aria-hidden="true">🇫🇷</div><h3>France</h3><p>Arts, documentaries and sports</p></article>
+      <div class="section-title"><h2 data-i18n="channelsTitle">Channels around the world</h2></div>
+      <p class="section-intro" data-i18n="channelsIntro">Search by country to find available channel information and playlists.</p>
+      <div class="search-wrap">
+        <label for="country-search" data-i18n="searchLabel">Search by country</label>
+        <input class="search-input" id="country-search" type="search" placeholder="For example: Argentina" autocomplete="off" data-i18n-placeholder="searchPlaceholder">
       </div>
+      <div class="grid" id="country-grid">
+        <article class="card country-card" data-search="united states usa estados unidos"><div class="flag" aria-hidden="true">🇺🇸</div><h3 data-i18n="countryUS">United States</h3><p data-i18n="descUS">News, local TV and culture</p></article>
+        <article class="card country-card" data-search="spain españa"><div class="flag" aria-hidden="true">🇪🇸</div><h3 data-i18n="countrySpain">Spain</h3><p data-i18n="descSpain">Entertainment and public TV</p></article>
+        <article class="card country-card" data-search="japan japon"><div class="flag" aria-hidden="true">🇯🇵</div><h3 data-i18n="countryJapan">Japan</h3><p data-i18n="descJapan">News, lifestyle and travel</p></article>
+        <article class="card country-card" data-search="france francia"><div class="flag" aria-hidden="true">🇫🇷</div><h3 data-i18n="countryFrance">France</h3><p data-i18n="descFrance">Arts, documentaries and sports</p></article>
+        <article class="card country-card" data-search="argentina"><div class="flag" aria-hidden="true">🇦🇷</div><h3 data-i18n="countryArgentina">Argentina</h3><p data-i18n="descArgentina">Copy the Argentina playlist link to use it in your IPTV player.</p><button class="copy-button" type="button" data-copy-url="https://tanoxgc.github.io/freeworldiptv/argentina.m3u8" data-i18n="copyArgentina">Copy playlist link</button></article>
+      </div>
+      <p class="no-results" id="no-results" hidden data-i18n="noResults">No countries found. Try another search.</p>
     </section>
 
     <section id="how-it-works">
-      <div class="section-title"><h2>Watch channels with VLC</h2></div>
+      <div class="section-title"><h2 data-i18n="vlcTitle">Watch channels with VLC</h2></div>
       <div class="steps">
-        <article class="step">
-          <div class="step-number">1</div>
-          <h3>Install VLC</h3>
-          <p>Download VLC Media Player from the official VideoLAN website for Windows, macOS, Linux, Android or iOS.</p>
-          <a class="download-button" href="https://get.videolan.org/vlc/3.0.23/win64/vlc-3.0.23-win64.exe" target="_blank" rel="noopener noreferrer">Download VLC for Windows</a>
-        </article>
-        <article class="step">
-          <div class="step-number">2</div>
-          <h3>Open a network stream</h3>
-          <p>Open VLC and select <kbd>Media</kbd> → <kbd>Open Network Stream</kbd>. On macOS, use <kbd>File</kbd> → <kbd>Open Network</kbd>.</p>
-        </article>
-        <article class="step">
-          <div class="step-number">3</div>
-          <h3>Paste the channel URL</h3>
-          <p>Enter an official stream link or an <strong>.m3u/.m3u8</strong> playlist URL, then click <kbd>Play</kbd>. VLC will connect directly to the broadcast.</p>
-        </article>
+        <article class="step"><div class="step-number" aria-hidden="true">1</div><h3 data-i18n="step1Title">Install VLC</h3><p data-i18n="step1Text">Download VLC Media Player from the official VideoLAN website.</p><a class="download-button" href="https://get.videolan.org/vlc/3.0.23/win64/vlc-3.0.23-win64.exe" target="_blank" rel="noopener noreferrer" data-i18n="downloadVlc">Download VLC for Windows</a></article>
+        <article class="step"><div class="step-number" aria-hidden="true">2</div><h3 data-i18n="step2Title">Open a network stream</h3><p data-i18n="step2Text">Open VLC and select <kbd>Media</kbd> → <kbd>Open Network Stream</kbd>. On macOS, use <kbd>File</kbd> → <kbd>Open Network</kbd>.</p></article>
+        <article class="step"><div class="step-number" aria-hidden="true">3</div><h3 data-i18n="step3Title">Paste the channel URL</h3><p data-i18n="step3Text">Enter an official stream link or an <strong>.m3u/.m3u8</strong> playlist URL, then click <kbd>Play</kbd>.</p></article>
       </div>
     </section>
 
-    <section>
-      <div class="legal"><strong>Watching with a playlist:</strong> In VLC, select <kbd>Media</kbd> → <kbd>Open File</kbd> and choose a legally sourced <strong>.m3u</strong> file, or use <kbd>Media</kbd> → <kbd>Open Network Stream</kbd> for a playlist URL. Only use channels distributed with permission. Availability may vary by country and broadcaster.</div>
-    </section>
+    <section><div class="legal"><strong data-i18n="playlistHeading">Watching with a playlist:</strong> <span data-i18n="playlistNote">Only use channels distributed with permission. Availability may vary by country and broadcaster.</span></div></section>
   </main>
 
-  <footer>© 2026 World Free IPTV — Only freely available and legally licensed channels.</footer>
+  <footer data-i18n="footer">© 2026 World Free IPTV — Only freely available and legally licensed channels.</footer>
+
+  <script>
+    const translations = {
+      en: { navLabel:"Main navigation",navHowToWatch:"How to Watch",heroTitleFirst:"Television",heroTitleAccent:"without borders.",heroDescription:"Discover free and legal TV channels from around the world. News, culture, entertainment and local stories — all in one place.",exploreChannels:"Explore channels",howToWatch:"How to watch",badge:"● Free and legal TV",channelsTitle:"Channels around the world",channelsIntro:"Search by country to find available channel information and playlists.",searchLabel:"Search by country",searchPlaceholder:"For example: Argentina",countryUS:"United States",descUS:"News, local TV and culture",countrySpain:"Spain",descSpain:"Entertainment and public TV",countryJapan:"Japan",descJapan:"News, lifestyle and travel",countryFrance:"France",descFrance:"Arts, documentaries and sports",countryArgentina:"Argentina",descArgentina:"Copy the Argentina playlist link to use it in your IPTV player.",copyArgentina:"Copy playlist link",noResults:"No countries found. Try another search.",vlcTitle:"Watch channels with VLC",step1Title:"Install VLC",step1Text:"Download VLC Media Player from the official VideoLAN website.",downloadVlc:"Download VLC for Windows",step2Title:"Open a network stream",step2Text:"Open VLC and select <kbd>Media</kbd> → <kbd>Open Network Stream</kbd>. On macOS, use <kbd>File</kbd> → <kbd>Open Network</kbd>.",step3Title:"Paste the channel URL",step3Text:"Enter an official stream link or an <strong>.m3u/.m3u8</strong> playlist URL, then click <kbd>Play</kbd>.",playlistHeading:"Watching with a playlist:",playlistNote:"Only use channels distributed with permission. Availability may vary by country and broadcaster.",footer:"© 2026 World Free IPTV — Only freely available and legally licensed channels.",copied:"Link copied",copyFailed:"Could not copy" },
+      es: { navLabel:"Navegación principal",navHowToWatch:"Cómo verlo",heroTitleFirst:"Televisión",heroTitleAccent:"sin fronteras.",heroDescription:"Descubre canales de televisión gratuitos y legales de todo el mundo. Noticias, cultura, entretenimiento e historias locales en un solo lugar.",exploreChannels:"Explorar canales",howToWatch:"Cómo verlo",badge:"● Televisión gratuita y legal",channelsTitle:"Canales de todo el mundo",channelsIntro:"Busca por país para encontrar información de canales y listas disponibles.",searchLabel:"Buscar por país",searchPlaceholder:"Por ejemplo: Argentina",countryUS:"Estados Unidos",descUS:"Noticias, televisión local y cultura",countrySpain:"España",descSpain:"Entretenimiento y televisión pública",countryJapan:"Japón",descJapan:"Noticias, estilo de vida y viajes",countryFrance:"Francia",descFrance:"Arte, documentales y deportes",countryArgentina:"Argentina",descArgentina:"Copia el enlace de la lista de Argentina para usarla en tu reproductor IPTV.",copyArgentina:"Copiar enlace de la lista",noResults:"No se encontraron países. Prueba otra búsqueda.",vlcTitle:"Mira canales con VLC",step1Title:"Instala VLC",step1Text:"Descarga VLC Media Player desde el sitio oficial de VideoLAN.",downloadVlc:"Descargar VLC para Windows",step2Title:"Abre una emisión de red",step2Text:"Abre VLC y selecciona <kbd>Medio</kbd> → <kbd>Abrir ubicación de red</kbd>. En macOS, usa <kbd>Archivo</kbd> → <kbd>Abrir ubicación de red</kbd>.",step3Title:"Pega la URL del canal",step3Text:"Introduce un enlace oficial de emisión o una URL de lista <strong>.m3u/.m3u8</strong> y pulsa <kbd>Reproducir</kbd>.",playlistHeading:"Ver con una lista:",playlistNote:"Utiliza únicamente canales distribuidos con autorización. La disponibilidad puede variar según el país y el emisor.",footer:"© 2026 World Free IPTV — Solo canales disponibles gratuitamente y con licencia legal.",copied:"Enlace copiado",copyFailed:"No se pudo copiar" }
+    };
+
+    let currentLanguage="en";
+    const languageButtons=document.querySelectorAll("[data-language]");
+    const searchInput=document.getElementById("country-search");
+    const countryCards=[...document.querySelectorAll(".country-card")];
+    const noResults=document.getElementById("no-results");
+
+    function setLanguage(language) {
+      currentLanguage=translations[language]?language:"en";
+      const dictionary=translations[currentLanguage];
+      document.documentElement.lang=currentLanguage;
+      document.title=currentLanguage=== "es"?"World Free IPTV | Canales gratuitos y legales":"World Free IPTV | Free and Legal TV Channels Worldwide";
+      document.querySelectorAll("[data-i18n]").forEach(element=>{ const key=element.dataset.i18n; if(dictionary[key]) element.innerHTML=dictionary[key]; });
+      document.querySelectorAll("[data-i18n-placeholder]").forEach(element=>{ const key=element.dataset.i18nPlaceholder; if(dictionary[key]) element.placeholder=dictionary[key]; });
+      languageButtons.forEach(button=>button.setAttribute("aria-pressed",String(button.dataset.language===currentLanguage)));
+      const copyButton=document.querySelector("[data-copy-url]");
+      if(copyButton&&!copyButton.classList.contains("copied")) copyButton.textContent=dictionary.copyArgentina;
+      filterCountries();
+    }
+
+    function normalizeText(value) { return value.normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase().trim(); }
+
+    function filterCountries() {
+      const query=normalizeText(searchInput.value);
+      let visibleCount=0;
+      countryCards.forEach(card=>{ const searchableText=normalizeText(`${card.dataset.search} ${card.innerText}`); const matches=searchableText.includes(query); card.hidden=!matches; if(matches) visibleCount++; });
+      noResults.hidden=visibleCount>0;
+    }
+
+    async function copyPlaylist(button) {
+      const dictionary=translations[currentLanguage];
+      const url=button.dataset.copyUrl;
+      try { await navigator.clipboard.writeText(url); button.textContent=dictionary.copied; }
+      catch(error) { const input=document.createElement("textarea"); input.value=url; document.body.appendChild(input); input.select(); const copied=document.execCommand("copy"); document.body.removeChild(input); button.textContent=copied?dictionary.copied:dictionary.copyFailed; }
+      button.classList.add("copied");
+      window.setTimeout(()=>{ button.classList.remove("copied"); button.textContent=translations[currentLanguage].copyArgentina; },2500);
+    }
+
+    languageButtons.forEach(button=>button.addEventListener("click",()=>setLanguage(button.dataset.language)));
+    searchInput.addEventListener("input",filterCountries);
+    document.querySelectorAll("[data-copy-url]").forEach(button=>button.addEventListener("click",()=>copyPlaylist(button)));
+    setLanguage("en");
+  </script>
 </body>
 </html>
